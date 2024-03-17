@@ -1,0 +1,17 @@
+{% load static %}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initital-scale=1.0" />
+
+<meta name="title" content="{{title|default:'Music Player App'}}" />
+<meta name="author" content="{{author|default:'shamith'}}" />
+<meta name="description" content="{{description|default:'Simple music player application built using django'}}" />
+
+<meta http-equiv="content-type" content="text/html" />
+<meta name="revised" content="{{revised|default:'DAY, MONTH dd, yyyy, hh:mm am/pm'}}" />
+
+<!-- The Open Graph Protocol -->
+<meta property="og:title" content="{{title|default:'Music Player App'}}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{hosted_url|default:'https://github.com/iamwatchdogs/Music-Player-App'}}" />
+<meta property="og:image" content="{{og_img|default:'{% static assets/img/icon.png%}'}}" />
+<!-- For OGP reference: https://ogp.me/ -->
