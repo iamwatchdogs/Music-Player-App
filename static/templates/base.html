@@ -1,7 +1,9 @@
+{% load static %}
 <!DOCTYPE html>
 
 <html lang="en">
   <head>
+    <link rel="icon" href="{% static assets/img/icon.png %}" type="image/icon-x" />
     <title>{{title|default:'Music Player App'}}</title>
     {% block 'external-stylesheets'%} 
 	{% endblock %}
