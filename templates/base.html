@@ -5,7 +5,7 @@
   <head>
     {% include 'meta.html' %}
     <link rel="icon" href="{% static 'assets/img/icon.png' %}" type="image/icon-x" />
-    {% if !remove_bootstrap%}
+    {% if remove_bootstrap != True %}
       {% load bootstrap5 %}
       {% bootstrap_css %}
       {% bootstrap_javascript %}
