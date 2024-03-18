@@ -26,7 +26,7 @@ a {
 }
 .home-page-title,
 .copyright-link,
-.menu-item{
+.menu-item {
   transition: 0.7s;
 }
 .home-page-title:hover,
@@ -74,10 +74,91 @@ a {
     height: 100%;
   }
 }
+/* ---------- */
+/* about page */
+/* ---------- */
 video,
 audio {
   pointer-events: none !important;
 }
 #copyright {
   cursor: pointer;
+}
+
+#about-block {
+  position: relative;
+  z-index: 1 !important;
+
+  background-color: rgba(0, 0, 0, 0.75) !important;
+
+  height: 85vh;
+  width: 75vw;
+  max-width: 815px;
+  min-width: 90px;
+  padding: 1vw;
+
+  border: 5px solid whitesmoke;
+  border-radius: 25px;
+
+  color: whitesmoke;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#about-block h1 {
+  font-size: 4rem;
+}
+#about-block p {
+  font-size: 1.25 rem;
+}
+@media (max-width: 700px) {
+  #about-block h1 {
+    font-size: 2.5rem;
+  }
+  #about-block p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 550px) {
+  #about-block h1 {
+    font-size: 2rem;
+  }
+  #about-block p {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 366px) {
+  #about-block h1 {
+    font-size: 1.2rem;
+  }
+  #about-block p {
+    font-size: 0.65rem;
+  }
+}
+@media (max-width: 285px) {
+  #about-block h1 {
+    font-size: 1rem;
+  }
+  #about-block p {
+    font-size: 0.55rem;
+  }
+}
+@media (max-width: 240px) {
+  #about-block h1 {
+    font-size: 0.9rem;
+  }
+  #about-block p {
+    font-size: 0.45rem;
+  }
+}
+@media (max-width: 200px) {
+  #about-block h1 {
+    font-size: 0.75rem;
+  }
+  #about-block p {
+    font-size: 0.4rem;
+  }
 }
