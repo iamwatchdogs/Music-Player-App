@@ -1,5 +1,49 @@
 {% extends 'base.html' %}
 
+{% load static %}
+{% block 'external-stylesheets'%} 
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+{% endblock %}
+{% block 'external-javascript'%} 
+	<script src="{% static 'javascript/script.js' %}" type="text/javascript"></script>
+{% endblock %}
+
 {% block 'body' %}
-<h1>Index Page</h1>
+<div id="root" class="w-100 vh-100 position-relative d-flex justify-content-center align-items-center bg-dark bg-opacity-25 p-5">
+	<audio loop autoplay id="background-audio">
+		<source src="{% static 'assets/audio/background-music.mp3' %}" type="audio/mpeg">
+		<!-- Credits: Dawn by Sappheiros -->
+		<!-- Source: https://breakingcopyright.com/song/sappheiros-dawn -->
+		<!-- Note that this audio has been modified to suit the project better, this not the exact output of the original song -->
+	</audio>
+	<video autoplay loop muted play-inline id="background-video" class="position-absolute bottom-0 end-0 z-n1">
+		<source src="{% static 'assets/video/background.mp4' %}" type="video/mp4"></source>
+		<!-- Credits: Haeresis - A Digital Design Studio -->
+		<!-- Source: https://www.youtube.com/watch?v=tQWdBBONB7s -->
+	</video>
+	<header class="w-100 position-absolute top-0 start-0 justify-content-center align-items-center z-1">
+		<nav class="position-relative d-flex justify-content-end align-items-center p-2">
+			<p class="m-2 p-2"><a href="#" title="learn more" class="menu-item fs-4">Learn More...</a></p>
+		</nav>
+	</header>
+	<main class="w-100 position-absolute m-2 p-1 d-flex flex-column justify-content-between main-content">
+		<h1 class="text-center">
+			<a href="http://www.github.com/iamwatchdogs/music-player-app" target="_blank" rel="noopener noreferrer" title="goto original project" class="display-2 home-page-title">
+				Welcome to Protron beats
+			</a>
+		</h1>
+		<p class="text-center lead description fd-3" id="tag-line">Tag-line</p>
+		<p class="text-center w-auto"><a href="#" class="anchor-to-button ">Queue your Music</a></p>
+	</main>
+	<div class="w-100 position-absolute bottom-0 start-0">
+		<footer class="position-relative d-flex justify-content-center align-items-center p-2">
+			<p class="text-center fw-light fst-italic fs-6" id="copyright">
+				Copyright  &#169; {% now 'Y' %} 
+				<a href="http://www.github.com/iamwatchdogs" title="goto github profile" target="_blank" rel="noopener noreferrer" class="copyright-link fw-light fst-italic fs-6">
+					Shamith Nakka
+				</a>
+			</p>
+		</footer>
+	</div> 
+</div>
 {% endblock %}
